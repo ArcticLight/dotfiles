@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/gkapfham/Workspace/example/src/org/test'
+let g:netrw_dirhist_2='/home/gkapfham/working/software/TweetComplete'
+let g:netrw_dirhist_3='/home/gkapfham/working/software/TweetComplete/src'
+let g:netrw_dirhist_4='/home/gkapfham/working/software/TweetComplete/src/org'
+let g:netrw_dirhist_5='/home/gkapfham/working/software/TweetComplete/src/org/tweetcomplete'
+let g:netrw_dirhist_6='/home/gkapfham/working/software/TweetComplete/src/org/tweetcomplete/tweet'
