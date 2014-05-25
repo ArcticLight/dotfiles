@@ -72,5 +72,5 @@ export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 export ANDROID_HOME=/home/xyzzy/dev/adt-bundle/sdk
 
 # The next line updates PATH for the Google Cloud SDK.
-source /home/xyzzy/google-cloud-sdk/path.bash.inc
-source /home/xyzzy/google-cloud-sdk/completion.zsh.inc
+#source /home/xyzzy/google-cloud-sdk/path.bash.inc
+#source /home/xyzzy/google-cloud-sdk/completion.zsh.inc
