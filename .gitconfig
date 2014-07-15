@@ -1,3 +1,5 @@
 [user]
 	name = Max Clive\n
 	email = mattrulz127@gmail.com
+[push]
+	default = simple
