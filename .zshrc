@@ -52,7 +52,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/xyzzy/dev/gradle/bin:/home/xyzzy/dev/adt-bundle/eclipse:$HOME/arm-2008q3/bin:$PATH"
+export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/xyzzy/dev/gradle/bin:/home/xyzzy/dev/adt-bundle/eclipse:/home/xyzzy/dev/idea/bin:$HOME/arm-2008q3/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
