@@ -74,3 +74,5 @@ export ANDROID_HOME=/home/xyzzy/dev/adt-bundle/sdk
 # The next line updates PATH for the Google Cloud SDK.
 #source /home/xyzzy/google-cloud-sdk/path.bash.inc
 #source /home/xyzzy/google-cloud-sdk/completion.zsh.inc
+
+export PATH=$PATH:$HOME/dev/idea/bin/
