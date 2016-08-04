@@ -108,4 +108,5 @@ fi
 
 if [ -t 1 ]; then
    env zsh -c 'tmux a || tmux new'
+   exit
 fi
