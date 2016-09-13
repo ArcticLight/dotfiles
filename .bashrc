@@ -105,8 +105,3 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
-if [ -t 1 ]; then
-   env zsh -c 'tmux a || tmux new'
-   exit
-fi
