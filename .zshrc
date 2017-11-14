@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="crunch"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -15,7 +15,7 @@ ZSH_THEME="agnoster"
 # CASE_SENSITIVE="true"
 
 # Uncomment this to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how often before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
@@ -30,12 +30,12 @@ ZSH_THEME="agnoster"
 # DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
 # much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment following line if you want to  shown in the command execution time stamp 
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
@@ -45,14 +45,14 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git web-search wd z zsh-syntax-highlighting)
+plugins=(git web-search wd z zsh-syntax-highlighting command-not-found)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/xyzzy/dev/gradle/bin:/home/xyzzy/dev/adt-bundle/eclipse:/home/xyzzy/dev/idea/bin:$HOME/arm-2008q3/bin:$PATH"
+export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/dev/gradle/bin:$HOME/dev/adt-bundle/eclipse:$HOME/dev/idea/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -68,8 +68,11 @@ export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+source "$HOME/.global-fancy-editor.profile"
+source "$HOME/.global-zsh-aliases.profile"
+
 # Make Gradle permanently happy
-export ANDROID_HOME=/home/xyzzy/dev/adt-bundle/sdk
+export ANDROID_HOME=$HOME/dev/adt-bundle/sdk
 
 # The next line updates PATH for the Google Cloud SDK.
 #source /home/xyzzy/google-cloud-sdk/path.bash.inc
