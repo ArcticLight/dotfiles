@@ -91,3 +91,5 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+echo "[$(date +"%m/%d/%y %I:%M %p")] Hello.\nToday is $(date +"%A, %b(%m) %d").\n\n" | tee -a "$HOME/.login-log"
