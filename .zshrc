@@ -92,4 +92,28 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# Startup Directory ?
+if [ -z {STARTUP_DIRT+x} ]; then
+
+else
+    cd $STARTUP_DIRT
+fi
+
+#standup-zsh
+if [ -z ${TMUX+x} ]; then
+    if [[ -o login ]]; then
+        if [[ -z ${XDG_CURRENT_DESKTOP+x} ]]; then
+           
+        else
+            $HOME/standup-zsh.sh
+            exit
+        fi
+    elif [[ -z ${XDG_CURRENT_DESKTOP+x} ]]; then
+        echo "Not login and no XDG seat? You might be a robot."
+    else
+        $HOME/standup-zsh.sh
+        exit
+    fi
+fi
+
 echo "[$(date +"%m/%d/%y %I:%M %p")] Hello.\nToday is $(date +"%A, %b(%m) %d").\n\n" | tee -a "$HOME/.login-log"
