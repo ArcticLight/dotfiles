@@ -13,8 +13,16 @@ if [[ $EDITOR == "*not found*" ]] ; then
     EDITOR=`which less`
 fi
 
+local usecode="no"
+# If on a mac
+if [[ "$(uname)" == "Darwin"]] ; then
+    usecode="yes"
 # If connected to an X server
-if xhost > /dev/null 2>&1 ; then
+elif xhost > /dev/null 2>&1 ; then
+    usecode="yes"
+fi
+
+if [[ $usecode == "yes" ]] ; then
     MAYBE_CODE=`which code`
     if [[ $MAYBE_CODE != "*not found*" ]] ; then
         EDITOR="$MAYBE_CODE -n -w"
