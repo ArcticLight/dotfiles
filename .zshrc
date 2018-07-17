@@ -55,30 +55,18 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/dev/gradle/bin:$HOME/dev/adt-bundle/eclipse:$HOME/dev/idea/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 source "$HOME/.global-fancy-editor.profile"
 source "$HOME/.global-zsh-aliases.profile"
 
 # Make Gradle permanently happy
 export ANDROID_HOME=$HOME/dev/adt-bundle/sdk
 
-# The next line updates PATH for the Google Cloud SDK.
-#source /home/xyzzy/google-cloud-sdk/path.bash.inc
-#source /home/xyzzy/google-cloud-sdk/completion.zsh.inc
+export PATH=$PATH:$HOME/go/bin/
 
-export PATH=$PATH:$HOME/dev/idea/bin/
+# If npm is installed...
+if which npm ; then
+    export PATH="${PATH}:$(npm -g bin)"
+fi
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -92,28 +80,35 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# Startup Directory ?
-if [ -z {STARTUP_DIRT+x} ]; then
+###
+# The old startup-directory-plus snippets (which basically never worked)
+# and standup-zsh integration with TMUX (disabled because it ended up a hassle)
+#
+# Kept here for posterity, temporarily.
+### 
+# # Startup Directory ?
+# if [ -z {STARTUP_DIRT+x} ]; then
+# 
+# else
+#     cd $STARTUP_DIRT
+# fi
+# 
+# #standup-zsh
+# if [ -z ${TMUX+x} ]; then
+#     if [[ -o login ]]; then
+#         if [[ -z ${XDG_CURRENT_DESKTOP+x} ]]; then
+#            
+#         else
+#             $HOME/standup-zsh.sh
+#             exit
+#         fi
+#     elif [[ -z ${XDG_CURRENT_DESKTOP+x} ]]; then
+#         echo "Not login and no XDG seat? You might be a robot."
+#     else
+#         $HOME/standup-zsh.sh
+#         exit
+#     fi
+# fi
 
-else
-    cd $STARTUP_DIRT
-fi
-
-#standup-zsh
-if [ -z ${TMUX+x} ]; then
-    if [[ -o login ]]; then
-        if [[ -z ${XDG_CURRENT_DESKTOP+x} ]]; then
-           
-        else
-            $HOME/standup-zsh.sh
-            exit
-        fi
-    elif [[ -z ${XDG_CURRENT_DESKTOP+x} ]]; then
-        echo "Not login and no XDG seat? You might be a robot."
-    else
-        $HOME/standup-zsh.sh
-        exit
-    fi
-fi
-
+# Welcome text
 echo "[$(date +"%m/%d/%y %I:%M %p")] Hello.\nToday is $(date +"%A, %b(%m) %d").\n\n" | tee -a "$HOME/.login-log"
