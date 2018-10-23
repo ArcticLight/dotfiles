@@ -15,7 +15,7 @@ fi
 
 local usecode="no"
 # If on a mac
-if [[ "$(uname)" == "Darwin"]] ; then
+if [[ "$(uname)" == "Darwin" ]] ; then
     usecode="yes"
 # If connected to an X server
 elif xhost > /dev/null 2>&1 ; then
