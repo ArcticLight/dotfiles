@@ -1,6 +1,7 @@
 #!/usr/bin/zsh
 
 # Shortcuts
+alias tc="tmux new-session -A -s main"
 alias l="ls -lh"
 alias ll="ls -lah"
 alias clip="xclip -selection c -i"
