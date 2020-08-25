@@ -61,7 +61,7 @@ source "$HOME/.global-zsh-aliases.profile"
 # Make Gradle permanently happy
 export ANDROID_HOME=$HOME/dev/adt-bundle/sdk
 
-export PATH=$PATH:$HOME/go/bin/
+export PATH=$PATH:$HOME/go/bin/:$HOME/bin
 
 # If npm is installed...
 if which npm > /dev/null 2>&1 ; then
