@@ -1,0 +1,176 @@
+{
+    "workbench.colorTheme": "Solarized Dark",
+
+    "editor.fontFamily": "'Monoid HalfTight'",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 18,
+    "editor.fontLigatures": true,
+
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+
+    "terminal.integrated.shell.osx": "/bin/bash",
+    "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true,
+
+    "[handlebars]": {
+        "editor.tabSize": 2
+    },
+
+    "[html]": {
+        "editor.tabSize": 2
+    },
+
+    "[css]": {
+        "editor.tabSize": 2
+    },
+
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+
+    "git.autofetch": true,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "explorer.confirmDelete": false,
+    "gitlens.advanced.fileHistoryFollowsRenames": false,
+    "window.zoomLevel": -1,
+    "gitlens.blame.toggleMode": "window",
+
+    "bracketPairColorizer.colorMode": "Independent",
+    "bracketPairColorizer.forceIterationColorCycle": true,
+    "bracketPairColorizer.forceUniqueOpeningColor": true,
+    "bracketPairColorizer.showBracketsInGutter": true,
+    "bracketPairColorizer.independentPairColors": [
+        [
+            "()",
+            [
+                "#af8700",
+                "#d75f00",
+                "#5f5faf",
+                "#0087ff"
+            ],
+            "Red"
+        ],
+        [
+            "[]",
+            [
+                "#af8700",
+                "#d75f00",
+                "#5f5faf",
+                "#0087ff"
+            ],
+            "Red"
+        ],
+        [
+            "{}",
+            [
+                "#af8700",
+                "#d75f00",
+                "#5f5faf",
+                "#0087ff"
+            ],
+            "Red"
+        ]
+    ],
+    "files.insertFinalNewline": true,
+    "cSpell.language": "en,en-US",
+    "cSpell.userWords": [
+      "ARTIFACTORY",
+      "Auditability",
+      "Blockchain",
+      "CSRF",
+      "Keycloak",
+      "Ldap",
+      "Rescoped",
+      "Struct",
+      "Styleguidist",
+      "USERADMIN",
+      "authserver",
+      "corsha",
+      "corshatech",
+      "cryptographically",
+      "deserialization",
+      "deserialize",
+      "falsey",
+      "hstream",
+      "mixins",
+      "mstream",
+      "mstreams",
+      "noeditor",
+      "permissioned",
+      "polyfill",
+      "prereqs",
+      "repo",
+      "resave",
+      "scrypt",
+      "scryptv",
+      "slugify",
+      "stateful",
+      "stdlogging",
+      "typecheck",
+      "typeorm",
+      "undeployed",
+      "webservice"
+    ],
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "handlebars",
+        "html",
+        "jade",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "pub",
+        "python",
+        "restructuredtext",
+        "rust",
+        "scss",
+        "text",
+        "typescript",
+        "yml"
+    ],
+    "extensions.ignoreRecommendations": true,
+    "diffEditor.renderSideBySide": true,
+    "zenMode.fullScreen": false,
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.fileHistory.location": "gitlens",
+    "gitlens.views.lineHistory.enabled": true,
+    "gitlens.views.lineHistory.location": "gitlens",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.parameterHints.enabled": false,
+    "workbench.editor.showTabs": true,
+    "workbench.activityBar.visible": true,
+    "eslint.alwaysShowStatus": true,
+
+    "go.inferGopath": false,
+    "search.followSymlinks": false,
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+    "git.confirmSync": false,
+    "go.useLanguageServer": true,
+    "gitlens.views.repositories.files.layout": "tree",
+    "gitlens.views.repositories.location": "gitlens",
+    "gitlens.views.compare.location": "gitlens",
+    "gitlens.views.search.location": "gitlens",
+    "editor.suggest.localityBonus": true,
+    "editor.suggest.showSnippets": false,
+    "editor.suggest.showWords": false,
+    "editor.suggest.showClasses": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.associations": {
+        "*.mustache": "handlebars"
+    },
+    "shellcheck.disableVersionCheck": true,
+}
