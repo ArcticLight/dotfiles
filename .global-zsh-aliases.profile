@@ -8,6 +8,8 @@ alias clip="xclip -selection c -i"
 alias e="nautilus . 2>/dev/null >/dev/null & disown ;"
 alias gits="git status"
 alias gitl="git log"
+alias k="kubectl"
+alias real='cd $(pwd -P)'
 
 # Management shortcuts
 alias nogood="edit \"\$HOME/.global-zsh-aliases.profile\""

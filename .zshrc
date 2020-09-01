@@ -1,5 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+
+source "$HOME/.global.zsh-path.profile"
 #TERM=xterm-256color
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -37,7 +39,7 @@ COMPLETION_WAITING_DOTS="true"
 # much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to  shown in the command execution time stamp 
+# Uncomment following line if you want to  shown in the command execution time stamp
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
@@ -45,14 +47,13 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git nvm z zsh-syntax-highlighting command-not-found)
+plugins=(git nvm z kubectl zsh-syntax-highlighting command-not-found)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/dev/gradle/bin:$HOME/dev/adt-bundle/eclipse:$HOME/dev/idea/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source "$HOME/.global-fancy-editor.profile"
@@ -61,7 +62,7 @@ source "$HOME/.global-zsh-aliases.profile"
 # Make Gradle permanently happy
 export ANDROID_HOME=$HOME/dev/adt-bundle/sdk
 
-export PATH=$PATH:$HOME/go/bin/
+export LIBVIRT_DEFAULT_URI=qemu:///system
 
 # If npm is installed...
 if which npm > /dev/null 2>&1 ; then
@@ -85,19 +86,19 @@ fi
 # and standup-zsh integration with TMUX (disabled because it ended up a hassle)
 #
 # Kept here for posterity, temporarily.
-### 
+###
 # # Startup Directory ?
 # if [ -z {STARTUP_DIRT+x} ]; then
-# 
+#
 # else
 #     cd $STARTUP_DIRT
 # fi
-# 
+#
 # #standup-zsh
 # if [ -z ${TMUX+x} ]; then
 #     if [[ -o login ]]; then
 #         if [[ -z ${XDG_CURRENT_DESKTOP+x} ]]; then
-#            
+#
 #         else
 #             $HOME/standup-zsh.sh
 #             exit
@@ -109,6 +110,8 @@ fi
 #         exit
 #     fi
 # fi
+
+export FLUX_FORWARD_NAMESPACE="flux"
 
 # Welcome text
 echo "[$(date +"%m/%d/%y %I:%M %p")] Hello.\nToday is $(date +"%A, %b(%m) %d").\n\n" | tee -a "$HOME/.login-log"
