@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+source "$HOME/.global-localcustomizations.profile"
 source "$HOME/.global.zsh-path.profile"
 #TERM=xterm-256color
 # Set name of the theme to load.
@@ -50,6 +51,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git nvm z kubectl zsh-syntax-highlighting command-not-found)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
+pre_zshProfile
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -115,3 +117,8 @@ export FLUX_FORWARD_NAMESPACE="flux"
 
 # Welcome text
 echo "[$(date +"%m/%d/%y %I:%M %p")] Hello.\nToday is $(date +"%A, %b(%m) %d").\n\n" | tee -a "$HOME/.login-log"
+
+# Created by `userpath` on 2020-09-20 14:07:02
+export PATH="$PATH:/home/xyzzy/.local/bin"
+post_zshProfile
+
