@@ -49,12 +49,7 @@
     },
 
     "git.autofetch": true,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
     "explorer.confirmDelete": false,
-    "gitlens.advanced.fileHistoryFollowsRenames": false,
-    "gitlens.blame.toggleMode": "window",
 
     "bracket-pair-colorizer-2.colorMode": "Independent",
     "bracket-pair-colorizer-2.forceIterationColorCycle": true,
@@ -142,15 +137,10 @@
     "extensions.ignoreRecommendations": true,
     "diffEditor.renderSideBySide": true,
     "zenMode.fullScreen": false,
-    "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.fileHistory.location": "gitlens",
-    "gitlens.views.lineHistory.enabled": true,
-    "gitlens.views.lineHistory.location": "gitlens",
     "diffEditor.ignoreTrimWhitespace": true,
     "editor.parameterHints.enabled": false,
     "workbench.editor.showTabs": true,
     "workbench.activityBar.visible": true,
-    "eslint.alwaysShowStatus": true,
 
     "go.inferGopath": false,
     "search.followSymlinks": false,
@@ -158,10 +148,6 @@
     "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
     "git.confirmSync": false,
     "go.useLanguageServer": true,
-    "gitlens.views.repositories.files.layout": "tree",
-    "gitlens.views.repositories.location": "gitlens",
-    "gitlens.views.compare.location": "gitlens",
-    "gitlens.views.search.location": "gitlens",
     "editor.suggest.localityBonus": true,
     "editor.suggest.showSnippets": false,
     "editor.suggest.showWords": false,
@@ -175,5 +161,8 @@
     "javascript.updateImportsOnFileMove.enabled": "never",
     "cSpell.enableFiletypes": [
         "mdx"
-    ]
+    ],
+    "remote.SSH.remotePlatform": {
+        "whitehall": "linux"
+    }
 }
