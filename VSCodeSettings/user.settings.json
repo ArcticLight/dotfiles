@@ -2,17 +2,29 @@
     "workbench.colorTheme": "Solarized Dark",
 
     "editor.fontFamily": "'Monoid HalfTight'",
+    "editor.fontWeight": "400",
     "editor.fontSize": 14,
     "editor.lineHeight": 18,
     "editor.fontLigatures": true,
-
+    "editor.wordWrap": "off",
     "editor.acceptSuggestionOnEnter": "off",
     "editor.acceptSuggestionOnCommitCharacter": false,
 
+    "terminal.integrated.fontWeight": "400",
+    "terminal.integrated.fontSize": 12,
     "terminal.integrated.shell.osx": "/bin/bash",
     "editor.trimAutoWhitespace": true,
     "files.trimTrailingWhitespace": true,
-
+    "[json]": {
+        "editor.tabSize": 2
+    },
+    "[markdown]": {
+        "editor.tabSize": 2,
+        "files.trimTrailingWhitespace": false,
+        "editor.formatOnSave": false,
+        "files.trimFinalNewlines": false,
+        "files.insertFinalNewline": true
+    },
     "[handlebars]": {
         "editor.tabSize": 2
     },
@@ -29,90 +41,76 @@
         "editor.tabSize": 2
     },
 
+    "[javascriptreact]": {
+        "editor.tabSize": 2
+    },
+    "[mdx]": {
+        "editor.tabSize": 2
+    },
+
     "git.autofetch": true,
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
     "explorer.confirmDelete": false,
     "gitlens.advanced.fileHistoryFollowsRenames": false,
-    "window.zoomLevel": -1,
     "gitlens.blame.toggleMode": "window",
 
-    "bracketPairColorizer.colorMode": "Independent",
-    "bracketPairColorizer.forceIterationColorCycle": true,
-    "bracketPairColorizer.forceUniqueOpeningColor": true,
-    "bracketPairColorizer.showBracketsInGutter": true,
-    "bracketPairColorizer.independentPairColors": [
-        [
-            "()",
-            [
-                "#af8700",
-                "#d75f00",
-                "#5f5faf",
-                "#0087ff"
-            ],
-            "Red"
-        ],
-        [
-            "[]",
-            [
-                "#af8700",
-                "#d75f00",
-                "#5f5faf",
-                "#0087ff"
-            ],
-            "Red"
-        ],
-        [
-            "{}",
-            [
-                "#af8700",
-                "#d75f00",
-                "#5f5faf",
-                "#0087ff"
-            ],
-            "Red"
-        ]
+    "bracket-pair-colorizer-2.colorMode": "Independent",
+    "bracket-pair-colorizer-2.forceIterationColorCycle": true,
+    "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
+    "bracket-pair-colorizer-2.colors": [
+            "#af8700",
+            "#d75f00",
+            "#5f5faf",
+            "#0087ff"
     ],
     "files.insertFinalNewline": true,
     "cSpell.language": "en,en-US",
     "cSpell.userWords": [
-      "ARTIFACTORY",
-      "Auditability",
-      "Blockchain",
-      "CSRF",
-      "Keycloak",
-      "Ldap",
-      "Rescoped",
-      "Struct",
-      "Styleguidist",
-      "USERADMIN",
-      "authserver",
-      "corsha",
-      "corshatech",
-      "cryptographically",
-      "deserialization",
-      "deserialize",
-      "falsey",
-      "hstream",
-      "mixins",
-      "mstream",
-      "mstreams",
-      "noeditor",
-      "permissioned",
-      "polyfill",
-      "prereqs",
-      "repo",
-      "resave",
-      "scrypt",
-      "scryptv",
-      "slugify",
-      "stateful",
-      "stdlogging",
-      "typecheck",
-      "typeorm",
-      "undeployed",
-      "webservice"
+        "ARTIFACTORY",
+        "Auditability",
+        "Blockchain",
+        "CSRF",
+        "Keycloak",
+        "Ldap",
+        "Rescoped",
+        "Struct",
+        "Styleguidist",
+        "Tween's",
+        "USERADMIN",
+        "authserver",
+        "corsha",
+        "corshatech",
+        "cryptographically",
+        "deserialization",
+        "deserialize",
+        "else",
+        "else's",
+        "falsey",
+        "hstream",
+        "lerp",
+        "mixins",
+        "mstream",
+        "mstreams",
+        "noeditor",
+        "nonbinary",
+        "performant",
+        "permissioned",
+        "polyfill",
+        "prereqs",
+        "repo",
+        "resave",
+        "scrypt",
+        "scryptv",
+        "slugify",
+        "stateful",
+        "stdlogging",
+        "tweens",
+        "typecheck",
+        "typeorm",
+        "undeployed",
+        "webservice"
     ],
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
@@ -167,10 +165,15 @@
     "editor.suggest.localityBonus": true,
     "editor.suggest.showSnippets": false,
     "editor.suggest.showWords": false,
-    "editor.suggest.showClasses": false,
     "explorer.confirmDragAndDrop": false,
     "files.associations": {
         "*.mustache": "handlebars"
     },
     "shellcheck.disableVersionCheck": true,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "cSpell.enableFiletypes": [
+        "mdx"
+    ]
 }
