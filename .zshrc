@@ -114,6 +114,8 @@ fi
 # fi
 
 export FLUX_FORWARD_NAMESPACE="flux"
+export DENO_INSTALL="/home/xyzzy/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Welcome text
 echo "[$(date +"%m/%d/%y %I:%M %p")] Hello.\nToday is $(date +"%A, %b(%m) %d").\n\n" | tee -a "$HOME/.login-log"
