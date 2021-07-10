@@ -1,6 +1,5 @@
 #!/bin/bash
-
-local opener=""
+opener=""
 
 if command -v "explorer.exe" 2>&1 > /dev/null ; then
     opener="explorer.exe"
