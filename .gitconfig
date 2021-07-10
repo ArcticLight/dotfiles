@@ -3,3 +3,6 @@
 	email = arcticlight@arcticlight.me
 [push]
 	default = simple
+[url "git@github.com:arcticlight/"]
+	pushInsteadOf = https://github.com/arcticlight/
+	pushInsteadOf = git://github.com/arcticlight/
