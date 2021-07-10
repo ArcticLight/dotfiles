@@ -1,0 +1,17 @@
+#!/bin/bash
+
+local opener=""
+
+if command -v "explorer.exe" 2>&1 > /dev/null ; then
+    opener="explorer.exe"
+fi
+
+if command -v "nautilus" 2>&1 > /dev/null ; then
+    opener="nautilus"
+fi
+
+if [ -z "${opener}" ] ; then
+    exit 1
+fi
+
+exec "$opener" "$@"
