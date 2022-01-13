@@ -9,6 +9,10 @@ if command -v "nautilus" 2>&1 > /dev/null ; then
     opener="nautilus"
 fi
 
+if command -v "/usr/bin/open" 2>&1 > /dev/null ; then
+    opener="/usr/bin/open"
+fi
+
 if [ -z "${opener}" ] ; then
     exit 1
 fi
