@@ -12,7 +12,6 @@
 
     "terminal.integrated.fontWeight": "400",
     "terminal.integrated.fontSize": 12,
-    "terminal.integrated.shell.osx": "/bin/bash",
     "editor.trimAutoWhitespace": true,
     "files.trimTrailingWhitespace": true,
     "[json]": {
@@ -51,39 +50,27 @@
     "git.autofetch": true,
     "explorer.confirmDelete": false,
 
-    "bracket-pair-colorizer-2.colorMode": "Independent",
-    "bracket-pair-colorizer-2.forceIterationColorCycle": true,
-    "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
-    "bracket-pair-colorizer-2.colors": [
-            "#af8700",
-            "#d75f00",
-            "#5f5faf",
-            "#0087ff"
-    ],
     "files.insertFinalNewline": true,
     "cSpell.language": "en,en-US",
     "cSpell.userWords": [
         "ARTIFACTORY",
         "Auditability",
-        "Blockchain",
-        "CSRF",
-        "Keycloak",
-        "Ldap",
-        "Rescoped",
-        "Struct",
-        "Styleguidist",
-        "Tween's",
-        "USERADMIN",
         "authserver",
+        "Blockchain",
         "corsha",
+        "Corshactl",
         "corshatech",
         "cryptographically",
+        "CSRF",
         "deserialization",
         "deserialize",
+        "dotfile",
         "else",
         "else's",
         "falsey",
         "hstream",
+        "Keycloak",
+        "Ldap",
         "lerp",
         "mixins",
         "mstream",
@@ -96,15 +83,20 @@
         "prereqs",
         "repo",
         "resave",
+        "Rescoped",
         "scrypt",
         "scryptv",
         "slugify",
         "stateful",
         "stdlogging",
+        "Struct",
+        "Styleguidist",
+        "Tween's",
         "tweens",
         "typecheck",
         "typeorm",
         "undeployed",
+        "USERADMIN",
         "webservice"
     ],
     "editor.autoClosingBrackets": "never",
@@ -137,7 +129,7 @@
     "extensions.ignoreRecommendations": true,
     "diffEditor.renderSideBySide": true,
     "zenMode.fullScreen": false,
-    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.parameterHints.enabled": false,
     "workbench.editor.showTabs": true,
     "workbench.activityBar.visible": true,
@@ -156,13 +148,14 @@
         "*.mustache": "handlebars"
     },
     "shellcheck.disableVersionCheck": true,
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "javascript.updateImportsOnFileMove.enabled": "never",
     "cSpell.enableFiletypes": [
         "mdx"
     ],
-    "remote.SSH.remotePlatform": {
-        "whitehall": "linux"
-    }
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "git.suggestSmartCommit": false,
+    "redhat.telemetry.enabled": false,
+    "editor.copyWithSyntaxHighlighting": false
 }
