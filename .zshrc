@@ -116,6 +116,11 @@ fi
 export FLUX_FORWARD_NAMESPACE="flux"
 export DENO_INSTALL="/home/xyzzy/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+
+if [ -f /opt/homebrew/bin/brew ] ; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # Welcome text
 echo "[$(date +"%m/%d/%y %I:%M %p")] Hello.\nToday is $(date +"%A, %b(%m) %d").\n\n" | tee -a "$HOME/.login-log"
@@ -124,3 +129,7 @@ echo "[$(date +"%m/%d/%y %I:%M %p")] Hello.\nToday is $(date +"%A, %b(%m) %d").\
 export PATH="$PATH:/home/xyzzy/.local/bin"
 post_zshProfile
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
