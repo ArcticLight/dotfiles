@@ -1,0 +1,7 @@
+".oh-my-zsh/custom/plugins/zsh-syntax-highlighting":
+  type: "archive"
+  url: https://github.com/zsh-users/zsh-syntax-highlighting/archive/refs/tags/0.7.1.tar.gz
+  exact: yes
+  stripComponents: 1
+  checksum:
+    sha512: e7e86b88cdac9b9ed5f973823ba8efff99dd720b9ed929f765f9f9266b9d6e147274f5957ceb630d51a660e396fc22e97f10cfbc5cdde941b907f3773bb1ea2b
