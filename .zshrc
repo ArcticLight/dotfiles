@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 source "$HOME/.global-localcustomizations.profile"
-source "$HOME/.global.zsh-path.profile"
+source "$HOME/.global-zsh-path.profile"
 #TERM=xterm-256color
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
