@@ -101,11 +101,11 @@ module.exports = {
     //
     // PowerShell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: '/bin/bash', //'/usr/local/bin/zsh',
+    shell: '/bin/zsh', //'/usr/local/bin/zsh',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
-    shellArgs: ['-ilc', 'tmux new-session -A -s main'],
+    shellArgs: ['--login'],
 
     // for environment variables
     env: {},
