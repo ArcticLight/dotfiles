@@ -56,20 +56,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
 source "$HOME/.global-fancy-editor.profile"
 source "$HOME/.global-zsh-aliases.profile"
-
-# Make Gradle permanently happy
-export ANDROID_HOME=$HOME/dev/adt-bundle/sdk
-
-export LIBVIRT_DEFAULT_URI=qemu:///system
-
-# If npm is installed...
-if which npm > /dev/null 2>&1 ; then
-    export PATH="${PATH}:$(npm -g bin)"
-fi
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -83,53 +71,17 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-###
-# The old startup-directory-plus snippets (which basically never worked)
-# and standup-zsh integration with TMUX (disabled because it ended up a hassle)
-#
-# Kept here for posterity, temporarily.
-###
-# # Startup Directory ?
-# if [ -z {STARTUP_DIRT+x} ]; then
-#
-# else
-#     cd $STARTUP_DIRT
-# fi
-#
-# #standup-zsh
-# if [ -z ${TMUX+x} ]; then
-#     if [[ -o login ]]; then
-#         if [[ -z ${XDG_CURRENT_DESKTOP+x} ]]; then
-#
-#         else
-#             $HOME/standup-zsh.sh
-#             exit
-#         fi
-#     elif [[ -z ${XDG_CURRENT_DESKTOP+x} ]]; then
-#         echo "Not login and no XDG seat? You might be a robot."
-#     else
-#         $HOME/standup-zsh.sh
-#         exit
-#     fi
-# fi
-
-export FLUX_FORWARD_NAMESPACE="flux"
-export DENO_INSTALL="/home/xyzzy/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
-
 if [ -f /opt/homebrew/bin/brew ] ; then
+    export PATH="/opt/homebrew/bin:$PATH"
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Welcome text
 echo "[$(date +"%m/%d/%y %I:%M %p")] Hello.\nToday is $(date +"%A, %b(%m) %d").\n\n" | tee -a "$HOME/.login-log"
 
-# Created by `userpath` on 2020-09-20 14:07:02
-export PATH="$PATH:/home/xyzzy/.local/bin"
-post_zshProfile
-
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+post_zshProfile
