@@ -1,3 +1,9 @@
+{{- $shell := "" -}}
+{{- if .chezmoi.os | eq "darwin" }}
+{{- $shell = "/bin/zsh" -}}
+{{- else }}
+{{- $shell = "/usr/bin/zsh" -}}
+{{- end -}}
 // Future versions of Hyper may add additional config options,
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
@@ -101,7 +107,7 @@ module.exports = {
     //
     // PowerShell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: '/bin/zsh', //'/usr/local/bin/zsh',
+    shell: {{ $shell | quote }},
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
