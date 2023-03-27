@@ -1,0 +1,1 @@
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIIZx7ejxdJkW6+OZ+JExy6aWofLunLqAElabfHeLq7O bogos@pancake-11
