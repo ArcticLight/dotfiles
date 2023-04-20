@@ -1,10 +1,16 @@
 [user]
 	name = Matthew Clive
-	email = arcticlight@arcticlight.me
+	email = {{ .email | quote }}
 [push]
 	default = simple
+{{ if eq .email "max@corsha.com" -}}
+[url "ssh://git@ssh.github.com/"]
+	insteadOf = https://github.com/
+	insteadOf = git://github.com/
+{{ else }}
 [url "git@github.com:ArcticLight/"]
 	insteadOf = https://github.com/ArcticLight/
 	insteadOf = https://github.com/arcticlight/
 	insteadOf = git://github.com/ArcticLight/
 	insteadOf = git://github.com/arcticlight/
+{{- end -}}
