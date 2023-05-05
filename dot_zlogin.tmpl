@@ -1,0 +1,6 @@
+{{ if eq .email "max@corsha.com" -}}
+if [ -d "/opt/homebrew/Caskroom/google-cloud-sdk/latest/" ] ; then
+    source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+    source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+fi
+{{- end }}
