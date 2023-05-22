@@ -3,6 +3,8 @@
 	email = {{ .email | quote }}
 [push]
 	default = simple
+[pull]
+	rebase = false
 {{ if eq .email "max@corsha.com" -}}
 [url "ssh://git@ssh.github.com/"]
 	insteadOf = https://github.com/
