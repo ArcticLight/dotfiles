@@ -3,6 +3,7 @@
 	email = {{ .email | quote }}
 [push]
 	default = simple
+	autoSetupRemote = true
 [pull]
 	rebase = false
 {{ if eq .email "max@corsha.com" -}}
@@ -15,6 +16,6 @@
 	insteadOf = https://github.com/arcticlight/
 	insteadOf = git://github.com/ArcticLight/
 	insteadOf = git://github.com/arcticlight/
-{{- end }}
 [init]
 	defaultBranch = main
+{{- end }}
