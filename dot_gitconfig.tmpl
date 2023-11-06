@@ -1,5 +1,9 @@
 [user]
+{{- if eq .email "max@corsha.com" "arcticlight@arcticlight.me" }}
+	name = Max Clive
+{{- else -}}
 	name = Matthew Clive
+{{- end }}
 	email = {{ .email | quote }}
 [push]
 	default = simple
@@ -10,12 +14,16 @@
 [url "ssh://git@ssh.github.com/"]
 	insteadOf = https://github.com/
 	insteadOf = git://github.com/
-{{ else }}
+{{- else -}}
+{{- if .login }}
 [url "git@github.com:ArcticLight/"]
 	insteadOf = https://github.com/ArcticLight/
 	insteadOf = https://github.com/arcticlight/
 	insteadOf = git://github.com/ArcticLight/
 	insteadOf = git://github.com/arcticlight/
+{{- end -}}
+{{- end -}}
+{{- if eq .email "arcticlight@arcticlight.me" }}
 [init]
 	defaultBranch = main
 {{- end }}

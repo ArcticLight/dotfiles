@@ -1,3 +1,5 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $login := promptBoolOnce . "login" "Is this a login machine (has an SSH key)" -}}
 data:
   email: {{ $email | quote }}
+  login: {{ $login }}
