@@ -1,7 +1,12 @@
 #!/usr/bin/zsh
 
 # The default
-EDITOR=`which vim`
+EDITOR=`which nvim`
+
+if [[ $EDITOR == "*not found*" ]] ; then
+    # Try vim?
+    EDITOR=`which vim`
+fi
 
 if [[ $EDITOR == "*not found*" ]] ; then
     # Try nano?
