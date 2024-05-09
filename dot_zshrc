@@ -58,6 +58,18 @@ if [[ $HOST != "Maxs-MBP" ]]; then
     PROMPT="%{$fg[cyan]%}%m%{$reset_color%} ✴${PROMPT}"
 fi
 
+if [ -f /opt/homebrew/bin/brew ] ; then
+    export PATH="/opt/homebrew/bin:$PATH"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [ -d "$HOME/.local/bin" ]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
+
 # User configuration
 
 source "$HOME/.global-fancy-editor.profile"
@@ -75,19 +87,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-if [ -f /opt/homebrew/bin/brew ] ; then
-    export PATH="/opt/homebrew/bin:$PATH"
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
 # Welcome text
 echo "[$(date +"%m/%d/%y %I:%M %p")] Hello.\nToday is $(date +"%A, %b(%m) %d").\n\n" | tee -a "$HOME/.login-log"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-if [ -d "$HOME/.local/bin" ]; then
-    export PATH="$HOME/.local/bin:$PATH"
-fi
 
 post_zshProfile
