@@ -1,5 +1,7 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
 {{- $login := promptBoolOnce . "login" "Is this a login machine (has an SSH key)" -}}
+{{- $ssh := promptBoolOnce . "ssh" (print "Is this machine (" .chezmoi.hostname ") usually headless (usually used as SSH)") -}}
 data:
   email: {{ $email | quote }}
   login: {{ $login }}
+  ssh: {{ $ssh }}

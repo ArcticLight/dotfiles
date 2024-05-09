@@ -1,9 +1,3 @@
-{{- $copy := "" -}}
-{{- if .chezmoi.os | eq "darwin" -}}
-{{- $copy = "pbcopy" }}
-{{- else }}
-{{- $copy = "xclip -selection c -i" }}
-{{- end -}}
 set -g default-terminal "tmux-256color"
 set -ga terminal-overrides ",xterm-256color*:RGB"
 set-window-option -g mode-keys vi
@@ -11,9 +5,21 @@ bind-key -n C-a send-prefix
 
 # Rebind tmux vi-copy to use the command copy-pipe, which
 # integrates with the shell to allow copy/paste to go to arbitrary buffers
-bind-key -T copy-mode-vi y send -X copy-pipe {{ $copy | quote }} \; display-message "Copied to system clipboard" \; send-keys -X cancel
+bind-key -T copy-mode-vi y send -X copy-pipe-and-cancel \; display-message "Copied to system clipboard"
 unbind -T copy-mode-vi Enter
-bind-key -T copy-mode-vi Enter send -X copy-pipe {{ $copy | quote }} \; display-message "Copied to system clipboard" \; send-keys -X cancel
+bind-key -T copy-mode-vi Enter send -X copy-pipe-and-cancel \; display-message "Copied to system clipboard"
+{{ if .chezmoi.os | eq "darwin" -}}
+# On MacOS, use pbcopy with copy-pipe
+set -s copy-command 'pbcopy'
+{{- else -}}
+{{- if (not .ssh) -}}
+# On Linux flavors (NOT SSH), use xclip with copy-pipe
+set -s copy-command 'xclip -selection c -i'
+{{- else -}}
+# WARN: This box IS .chezmoi.ssh so copy-command is UNSET.
+# (TODO: This variant needs more testing, especially for Tmux-nesting-dolls)
+{{- end -}}
+{{- end }}
 
 # Allow easy reload of tmux-conf on 'r' (when experimenting with settings)
 bind r source-file ~/.tmux.conf \; display-message "Reloaded config."
