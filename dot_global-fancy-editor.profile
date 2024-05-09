@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 
 # The default
-EDITOR=`which nvim`
+EDITOR=`which hx`
 
 if [[ $EDITOR == "*not found*" ]] ; then
     # Try vim?
@@ -16,22 +16,6 @@ fi
 if [[ $EDITOR == "*not found*" ]] ; then
     # Uh oh
     EDITOR=`which less`
-fi
-
-local usecode="no"
-# If on a mac
-if [[ "$(uname)" == "Darwin" ]] ; then
-    usecode="yes"
-# If connected to an X server
-elif xhost > /dev/null 2>&1 ; then
-    usecode="yes"
-fi
-
-if [[ $usecode == "yes" ]] ; then
-    MAYBE_CODE=`which code`
-    if [[ $MAYBE_CODE != "*not found*" ]] ; then
-        EDITOR="$MAYBE_CODE -n -w"
-    fi
 fi
 
 export VISUAL="$EDITOR"
