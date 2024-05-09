@@ -4,7 +4,8 @@
 {{- else }}
 {{- $copy = "xclip -selection c -i" }}
 {{- end -}}
-set -g default-terminal "screen-256color"
+set -g default-terminal "tmux-256color"
+set -ga terminal-overrides ",xterm-256color*:RGB"
 set-window-option -g mode-keys vi
 bind-key -n C-a send-prefix
 
