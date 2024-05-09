@@ -1,0 +1,14 @@
+theme = "solarized_dark"
+
+[editor]
+cursor-shape.insert="bar"
+cursor-shape.normal="block"
+auto-format=false
+true-color=true
+rulers=[80]
+default-line-ending="lf"
+file-picker.max-depth=8
+
+[editor.lsp]
+snippets=false
+
