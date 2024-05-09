@@ -53,6 +53,10 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 pre_zshProfile
 source $ZSH/oh-my-zsh.sh
+HOST="$(print -P %m)"
+if [[ $HOST != "Maxs-MBP" ]]; then
+    PROMPT="%{$fg[cyan]%}%m%{$reset_color%} ✴${PROMPT}"
+fi
 
 # User configuration
 
