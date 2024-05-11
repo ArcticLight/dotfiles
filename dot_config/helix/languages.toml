@@ -1,0 +1,2 @@
+language-server.typescript-language-server.command = "npx"
+language-server.typescript-language-server.args = ["typescript-language-server", "--stdio"]
