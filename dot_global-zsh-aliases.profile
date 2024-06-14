@@ -1,8 +1,11 @@
 #!/usr/bin/zsh
 
 # Shortcuts
-alias tc="tmux new-session -A -s main"
-alias zc="zellij a -c"
+if command -v zellij >/dev/null 2>&1 ; then
+  alias tc="zellij a -c"
+elif command -v tmux >/dev/null 2>&1 ; then
+  alias tc="tmux new-session -A -s main"
+fi
 alias l="ls -lh"
 alias ll="ls -lah"
 alias k="kubectl"
