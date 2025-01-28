@@ -64,7 +64,11 @@ if [ -f /opt/homebrew/bin/brew ] ; then
 fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm completions
+export DENO_DIR="$HOME/.deno"
+[ -s "$DENO_DIR/env" ] && \. "$DENO_DIR/env"
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/xyzzy/.zsh/completions:"* ]]; then export FPATH="/Users/xyzzy/.zsh/completions:$FPATH"; fi
 if [ -d "$HOME/.local/bin" ]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi

@@ -45,7 +45,8 @@
     },
 
     "[javascript]": {
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
 
     "[javascriptreact]": {
@@ -174,4 +175,8 @@
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "typescript.updateImportsOnFileMove.enabled": "never",
     "editor.accessibilitySupport": "off",
+    "[typescript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "chat.commandCenter.enabled": false,
 }
