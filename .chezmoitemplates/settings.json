@@ -116,31 +116,6 @@
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
     "editor.linkedEditing": true,
-    "cSpell.enabledLanguageIds": [
-        "asciidoc",
-        "c",
-        "cpp",
-        "csharp",
-        "handlebars",
-        "html",
-        "jade",
-        "javascript",
-        "javascriptreact",
-        "json",
-        "latex",
-        "less",
-        "markdown",
-        "php",
-        "plaintext",
-        "pub",
-        "python",
-        "restructuredtext",
-        "rust",
-        "scss",
-        "text",
-        "typescript",
-        "yml"
-    ],
     "extensions.ignoreRecommendations": true,
     "diffEditor.renderSideBySide": true,
     "zenMode.fullScreen": false,
@@ -161,12 +136,8 @@
     "files.associations": {
         "*.mustache": "handlebars"
     },
-    "shellcheck.disableVersionCheck": true,
     "telemetry.telemetryLevel": "off",
     "javascript.updateImportsOnFileMove.enabled": "never",
-    "cSpell.enableFiletypes": [
-        "mdx"
-    ],
     "gitlens.codeLens.enabled": false,
     "gitlens.statusBar.enabled": false,
     "git.suggestSmartCommit": false,
@@ -176,7 +147,12 @@
     "typescript.updateImportsOnFileMove.enabled": "never",
     "editor.accessibilitySupport": "off",
     "[typescript]": {
-        "editor.defaultFormatter": "denoland.vscode-deno"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "chat.commandCenter.enabled": false,
+    "continue.disableQuickFix": true,
+    "continue.enableTabAutocomplete": false,
+    "continue.pauseCodebaseIndexOnStart": true,
+    "continue.telemetryEnabled": false,
+    "playwright.reuseBrowser": true
 }
