@@ -10,5 +10,4 @@ alias l="ls -lh"
 alias ll="ls -lah"
 alias k="kubectl"
 alias real='cd $(pwd -P)'
-alias gd="git diff -M -B -Db --ignore-blank-lines --minimal -l1000 "
-
+alias gd="git diff -M -B -Db --ignore-blank-lines --minimal -l1000 -- ':!*.min.*' ':!*package-lock.json' "

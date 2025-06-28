@@ -1,5 +1,5 @@
 [user]
-{{- if eq .email "max@corsha.com" "arcticlight@arcticlight.me" }}
+{{- if eq .email "arcticlight@arcticlight.me" }}
 	name = Max Clive
 {{- else -}}
 	name = Matthew Clive
@@ -10,11 +10,6 @@
 	autoSetupRemote = true
 [pull]
 	rebase = false
-{{ if eq .email "max@corsha.com" -}}
-[url "ssh://git@ssh.github.com/"]
-	insteadOf = https://github.com/
-	insteadOf = git://github.com/
-{{- else -}}
 {{- if .login }}
 [url "git@github.com:ArcticLight/"]
 	insteadOf = https://github.com/ArcticLight/
@@ -22,12 +17,18 @@
 	insteadOf = git://github.com/ArcticLight/
 	insteadOf = git://github.com/arcticlight/
 {{- end -}}
-{{- end -}}
 {{- if eq .email "arcticlight@arcticlight.me" }}
 [init]
 	defaultBranch = main
 {{- end }}
 [core]
 	pager = delta
+[interactive]
+	diffFilter = delta --color-only
 [delta]
+	navigate = true
 	line-numbers = true
+	side-by-side = true
+
+[merge]
+	conflictStyle = zdiff3
