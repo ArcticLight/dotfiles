@@ -1,0 +1,20 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
+
+if ! command -v brew > /dev/null 2>&1 ; then
+echo "Brew isn't installed!"
+echo
+echo "Trying to install it..."
+/usr/bin/env bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+brew bundle --file=- <<EOF
+{{ range .packages.darwin.brew -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .packages.darwin.cask -}}
+cask {{ . | quote }}
+{{ end -}}
+EOF
+{{ end -}}
+

@@ -1,0 +1,18 @@
+packages:
+  darwin:
+    brew:
+      - bash
+      - calc
+      - chezmoi
+      - git
+      - git-delta
+      - helix
+      - ncdu
+      - vim
+      - wget
+      - watch
+      - zellij
+    cask:
+      - ghostty
+      - ungoogled-chromium
+

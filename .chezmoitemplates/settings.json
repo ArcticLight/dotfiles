@@ -43,12 +43,13 @@
     "[css]": {
         "editor.tabSize": 2
     },
-
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
     "[javascript]": {
         "editor.tabSize": 2,
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-
     "[javascriptreact]": {
         "editor.tabSize": 2
     },
@@ -60,7 +61,7 @@
         "editor.tabSize": 4
     },
     "editor.tabSize": 2,
-    "git.autofetch": true,
+    "git.autofetch": false,
     "explorer.confirmDelete": false,
 
     "files.insertFinalNewline": true,
@@ -113,7 +114,7 @@
         "webservice",
         "wordle"
     ],
-    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingBrackets": "beforeWhitespace",
     "editor.autoClosingQuotes": "never",
     "editor.linkedEditing": true,
     "extensions.ignoreRecommendations": true,
@@ -125,8 +126,6 @@
 
     "go.inferGopath": false,
     "search.followSymlinks": false,
-    "emmet.showSuggestionsAsSnippets": true,
-    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
     "git.confirmSync": false,
     "go.useLanguageServer": true,
     "editor.suggest.localityBonus": true,
@@ -146,13 +145,17 @@
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "typescript.updateImportsOnFileMove.enabled": "never",
     "editor.accessibilitySupport": "off",
-    "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
     "chat.commandCenter.enabled": false,
     "continue.disableQuickFix": true,
     "continue.enableTabAutocomplete": false,
     "continue.pauseCodebaseIndexOnStart": true,
     "continue.telemetryEnabled": false,
-    "playwright.reuseBrowser": true
+    "playwright.reuseBrowser": true,
+    "workbench.editor.enablePreview": false,
+    "testing.automaticallyOpenTestResults": "openOnTestFailure",
+    "testing.countBadge": "off",
+    "testing.defaultGutterClickAction": "debug",
+    "javascript.preferences.importModuleSpecifier": "project-relative",
+    "typescript.preferences.importModuleSpecifier": "project-relative",
+    "raspberry-pi-pico.python3Path": "/opt/homebrew/bin/python3"
 }

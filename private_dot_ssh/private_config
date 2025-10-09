@@ -1,8 +1,11 @@
+VisualHostKey yes
+PasswordAuthentication no
+
 Host *
+  ExitOnForwardFailure yes
   KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
 
 Host xe
   HostName xe-rack.home.arcticlight.me
   User xyzzy
-  ForwardAgent yes 
 

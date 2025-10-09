@@ -11,3 +11,6 @@ alias ll="ls -lah"
 alias k="kubectl"
 alias real='cd $(pwd -P)'
 alias gd="git diff -M -B -Db --ignore-blank-lines --minimal -l1000 -- ':!*.min.*' ':!*package-lock.json' "
+alias ccz='cd $(chezmoi source-path)'
+alias ccu='chezmoi update'
+
