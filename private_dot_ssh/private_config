@@ -1,5 +1,7 @@
-VisualHostKey yes
 PasswordAuthentication no
+
+Match sessiontype shell
+  VisualHostKey yes
 
 Host *
   ExitOnForwardFailure yes
