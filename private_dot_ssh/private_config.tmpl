@@ -1,8 +1,8 @@
 PasswordAuthentication no
-
+{{- if eq .chezmoi.os "darwin" }}
 Match sessiontype shell
   VisualHostKey yes
-
+{{- end }}
 Host *
   ExitOnForwardFailure yes
   KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
