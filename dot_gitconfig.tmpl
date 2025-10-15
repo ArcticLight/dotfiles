@@ -1,7 +1,7 @@
 [user]
-{{- if eq .email "arcticlight@arcticlight.me" }}
+{{- if or (hasSuffix "arcticlight.me" .email) (hasPrefix "max" .email) }}
 	name = Max Clive
-{{- else -}}
+{{- else }}
 	name = Matthew Clive
 {{- end }}
 	email = {{ .email | quote }}
