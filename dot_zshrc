@@ -47,6 +47,10 @@ fi
 
 # User configuration
 
+autoload edit-command-line
+zle -N edit-command-line
+bindkey '^Xe' edit-command-line
+
 source "$HOME/.global-fancy-editor.profile"
 source "$HOME/.global-zsh-aliases.profile"
 
