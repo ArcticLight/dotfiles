@@ -8,6 +8,12 @@ true-color=true
 rulers=[80]
 default-line-ending="lf"
 file-picker.max-depth=8
+auto-pairs=false
+middle-click-paste=false
+atomic-save=false
+trim-trailing-whitespace=true
+# supported soon:
+# rainbow-brackets=true
 
 [editor.lsp]
 snippets=false

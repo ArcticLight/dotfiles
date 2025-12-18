@@ -1,2 +1,11 @@
 language-server.typescript-language-server.command = "npx"
 language-server.typescript-language-server.args = ["typescript-language-server", "--stdio"]
+
+[[language]]
+name="markdown"
+text-width=80
+[language.soft-wrap]
+  enable=true
+  wrap-at-text-width=true
+  max-wrap=25
+  wrap-indicator=""
