@@ -1,9 +1,16 @@
-language-server.typescript-language-server.command = "npx"
-language-server.typescript-language-server.args = ["typescript-language-server", "--stdio"]
+[language-server.typescript-language-server]
+command = "npx"
+args = ["typescript-language-server", "--stdio"]
+
+[language-server.codebook]
+command = "codebook-lsp"
+args = [ "serve" ]
 
 [[language]]
 name="markdown"
 text-width=80
+language-servers = [ "codebook" ]
+
 [language.soft-wrap]
   enable=true
   wrap-at-text-width=true
