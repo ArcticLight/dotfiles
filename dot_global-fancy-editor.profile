@@ -21,6 +21,9 @@ fi
 export VISUAL="$EDITOR"
 export GIT_EDITOR="$EDITOR"
 export EDITOR="$EDITOR"
+if [[ $EDITOR == "*hx*" ]] ; then
+    alias shx='sudo -s hx $(pwd)'
+fi
 
 if command -v "zellij" > /dev/null 2>&1 ; then
     alias edit='zellij edit';
