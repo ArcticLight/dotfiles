@@ -14,5 +14,14 @@
     "checksum": {
       "sha512": "e7e86b88cdac9b9ed5f973823ba8efff99dd720b9ed929f765f9f9266b9d6e147274f5957ceb630d51a660e396fc22e97f10cfbc5cdde941b907f3773bb1ea2b"
     }
+  },
+  ".oh-my-zsh/custom/plugins/autoswitch_virtualenv": {
+    "type": "archive",
+    "url": "https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv/archive/refs/tags/3.8.2.tar.gz",
+    "exact": true,
+    "stripComponents": 1,
+    "checksum": {
+      "sha512": "0dba4bd88471240f0d6d489d28048214435ef7a492127b6309df3b086348e287b74639002dda135d25979d88da6378ea0cafe4bda1e7191f3a192bd5cc1f842b"
+    }
   }
 }
