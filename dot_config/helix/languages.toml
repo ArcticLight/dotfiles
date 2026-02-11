@@ -1,3 +1,7 @@
+# ====
+# TYPESCRIPT: Use ts-language-server from the "current" package, via npx
+# wants: npm i typescript && npm i -D typescript-language-server
+# ====
 [language-server.typescript-language-server]
 command = "npx"
 args = ["typescript-language-server", "--stdio"]
@@ -6,13 +10,37 @@ args = ["typescript-language-server", "--stdio"]
 command = "codebook-lsp"
 args = [ "serve" ]
 
+# ====
+# MARKDOWN: Enable soft-wrap and codebook langserver.
+# wants: brew install codebook-lsp (it's a core formula)
+# ====
 [[language]]
 name="markdown"
 text-width=80
 language-servers = [ "codebook" ]
 
 [language.soft-wrap]
-  enable=true
-  wrap-at-text-width=true
-  max-wrap=25
-  wrap-indicator=""
+enable=true
+wrap-at-text-width=true
+max-wrap=25
+wrap-indicator=""
+
+# =====
+# PYTHON: Configure Basedpyright langserver
+# wants: uv add --dev basedpyright
+# =====
+[[language]]
+name = "python"
+language-servers = [ "basedpyright" ]
+
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = [ "--stdio" ]
+
+[language-server.basedpyright.config.basedpyright.analysis]
+autoSearchPaths = true
+typeCheckingMode = "standard"
+reportExplicitAny = false
+
+[language-server.basedpyright.config.python]
+pythonPath = ".venv/bin/python" # Relative paths are generally recommended
