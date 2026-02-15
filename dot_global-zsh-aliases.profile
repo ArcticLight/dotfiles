@@ -15,6 +15,7 @@ alias gr="git rev-parse --short HEAD"
 alias gd="git diff -M -B -Db --ignore-blank-lines --minimal -l1000 -- ':!*.min.*' ':!*package-lock.json' "
 alias ccz='cd $(chezmoi source-path)'
 alias ccu='chezmoi update'
+unalias gf
 
 # change term command "open" into
 # desktop-specific bin on all platforms
