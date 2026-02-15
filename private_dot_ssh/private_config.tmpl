@@ -11,3 +11,10 @@ Host xe
   HostName xe-rack.home.arcticlight.me
   User xyzzy
 
+{{ if not (hasSuffix ".ai" .email) -}}
+{{ range .hardware }}
+Host {{.hostname}}
+  HostName {{.fqdn}}
+  User xyzzy
+{{- end }}
+{{- end }}
