@@ -23,5 +23,14 @@
     "checksum": {
       "sha512": "0dba4bd88471240f0d6d489d28048214435ef7a492127b6309df3b086348e287b74639002dda135d25979d88da6378ea0cafe4bda1e7191f3a192bd5cc1f842b"
     }
+  },
+  ".oh-my-zsh/custom/plugins/zsh-helix-mode": {
+    "type": "archive",
+    "url": "https://github.com/Multirious/zsh-helix-mode/archive/e8d4940588f9809ab5658aa7c9c664921d547879.tar.gz",
+    "exact": true,
+    "stripComponents": 1,
+    "checksum": {
+      "sha512": "bed882bd72d9d492a2cbda0ac04489e2b5adb5b1307b920af76ce5946897007902c25106c3774f2c09cb46d9a43e2154cb47c635a59e22d05fa0e3d1877a54a8"
+    }
   }
 }
