@@ -8,11 +8,11 @@
   },
   ".oh-my-zsh/custom/plugins/zsh-syntax-highlighting": {
     "type": "archive",
-    "url": "https://github.com/zsh-users/zsh-syntax-highlighting/archive/refs/tags/0.7.1.tar.gz",
+    "url": "https://github.com/zsh-users/zsh-syntax-highlighting/archive/refs/tags/0.8.0.tar.gz",
     "exact": true,
     "stripComponents": 1,
     "checksum": {
-      "sha512": "e7e86b88cdac9b9ed5f973823ba8efff99dd720b9ed929f765f9f9266b9d6e147274f5957ceb630d51a660e396fc22e97f10cfbc5cdde941b907f3773bb1ea2b"
+      "sha512": "58593c8bf3fa1476ecf0fceb1fc4eab986a778de657d359a28fe48798e787896fbf2588441c69b017a08227ab44dd46473afb16e0f125aae59cc58004bfa8c2e"
     }
   },
   ".oh-my-zsh/custom/plugins/autoswitch_virtualenv": {

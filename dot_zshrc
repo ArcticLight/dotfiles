@@ -26,6 +26,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
+    zsh-helix-mode
     git
     nvm
     ssh-agent
@@ -34,11 +35,13 @@ plugins=(
     brew
     autoswitch_virtualenv
     command-not-found
-    zsh-helix-mode
+    zsh-syntax-highlighting
 )
 
 pre_zshProfile
 source "$ZSH/oh-my-zsh.sh"
+zhm-add-update-region-highlight-hook
+
 HOST="$(print -P %m)"
 if [[ $HOST != "Maxs-MBP" ]]; then
     PROMPT="%{$fg[cyan]%}%m%{$reset_color%} ✴${PROMPT}"
