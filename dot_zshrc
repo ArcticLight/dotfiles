@@ -36,6 +36,7 @@ plugins=(
     autoswitch_virtualenv
     command-not-found
     zsh-syntax-highlighting
+    history-substring-search
 )
 
 pre_zshProfile
@@ -62,6 +63,8 @@ fi
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '^Xe' edit-command-line
+bindkey -N "^R"
+bindkey -M hxins "^R" history-substring-search-up
 
 source "$HOME/.global-fancy-editor.profile"
 source "$HOME/.global-zsh-aliases.profile"
