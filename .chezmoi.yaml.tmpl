@@ -1,7 +1,17 @@
+{{- $pubkeyFiles := dict -}}
+{{- range glob (joinPath .chezmoi.sourceDir "exact_my-stuff" "exact_pubkeys" "*.pub") -}}
+  {{- $fname := (. | base | trimSuffix ".pub") -}}
+  {{- $_ := set $pubkeyFiles $fname . -}}
+{{- end -}}
 {{- $email := promptStringOnce . "email" "Email address" -}}
 {{- $login := promptBoolOnce . "login" "Is this a login machine (has an SSH key)" -}}
 {{- $ssh := promptBoolOnce . "ssh" (print "Is this machine (" .chezmoi.hostname ") usually headless (usually used as SSH)") -}}
+{{- $usePubkeys := list -}}
+{{- range promptMultichoice "Pubkeys to authorize" (keys $pubkeyFiles | sortAlpha) }}
+  {{- $usePubkeys = append $usePubkeys (get $pubkeyFiles .) -}}
+{{- end -}}
 data:
   email: {{ $email | quote }}
   login: {{ $login }}
   ssh: {{ $ssh }}
+  usePubkeys: {{ $usePubkeys | toJson }}
