@@ -1,0 +1,15 @@
+#!/usr/bin/zsh
+if [ $# -lt 1 ] ; then
+	1>&2 echo "Must be called with the name of a layout!"
+	exit 1
+fi
+
+target="${HOME}/.config/zellij/layouts/${1}.kdl"
+shift
+
+if ! [ -f "${target}" ] ; then
+	1>&2 echo "File ~/.config/zellij/layouts/"$(basename "$target")" does not exist..."
+	exit 1
+fi
+
+zellij ac new-tab -l "${HOME}/.config/zellij/layouts/${1}.kdl" "$@"
