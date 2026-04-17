@@ -12,4 +12,4 @@ if ! [ -f "${target}" ] ; then
 	exit 1
 fi
 
-zellij ac new-tab -l "${HOME}/.config/zellij/layouts/${1}.kdl" "$@"
+zellij ac new-tab -l "$target" "$@"
