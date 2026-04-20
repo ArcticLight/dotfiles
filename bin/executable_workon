@@ -1,4 +1,5 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
+
 if [ $# -lt 1 ] ; then
 	1>&2 echo "Must be called with the name of a layout!"
 	exit 1
