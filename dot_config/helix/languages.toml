@@ -1,3 +1,19 @@
+[[language]]
+name="javascript"
+language-servers = [ "typescript-language-server", "codebook" ]
+
+[[language]]
+name="typescript"
+language-servers = [ "typescript-language-server", "codebook" ]
+
+[[language]]
+name="jsx"
+language-servers = [ "typescript-language-server", "codebook" ]
+
+[[language]]
+name="tsx"
+language-servers = [ "typescript-language-server", "codebook" ]
+
 # ====
 # TYPESCRIPT: Use ts-language-server from the "current" package, via npx
 # wants: npm i typescript && npm i -D typescript-language-server
