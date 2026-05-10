@@ -1,11 +1,19 @@
 typeset -gaU path
+
+function _mayPath() {
+  if [ -d "$1" ]; then
+    path+="$1"
+  fi
+}
+
 path=(
   "${HOME}/bin"
 )
 
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
-  path+="/home/linuxbrew/.linuxbrew/bin"
-fi
+_mayPath "/home/linuxbrew/.linuxbrew/bin"
+_mayPath "/home/linuxbrew/.linuxbrew/sbin"
+_mayPath "/opt/homebrew/bin"
+_mayPath "/opt/homebrew/sbin"
 
 path+=(
   "/usr/local/sbin"
