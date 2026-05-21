@@ -29,13 +29,13 @@ hardware:
   fqdn: druskymatic.home.arcticlight.me
   type: ubuntu
   mem: '127gb'
-- hostname: pinecone
-  hardware: pi3
-  fqdn: pinecone.home.arcticlight.me
-  type: bookworm
-  mem: '1gb'
-- hostname: pineapple
-  hardware: pi3
-  fqdn: pineapple.home.arcticlight.me
-  type: bookworm
-  mem: '1gb'
+# - hostname: pinecone
+#   hardware: pi3
+#   fqdn: pinecone.home.arcticlight.me
+#   type: bookworm
+#   mem: '1gb'
+# - hostname: pineapple
+#   hardware: pi3
+#   fqdn: pineapple.home.arcticlight.me
+#   type: bookworm
+#   mem: '1gb'
