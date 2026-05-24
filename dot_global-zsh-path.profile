@@ -27,6 +27,7 @@ path+=(
   "${HOME}/go/bin"
   "/snap/bin"
 )
+_mayPath "/Library/Developer/CommandLineTools/usr/bin"
 
 if [ -f "$HOME/.cargo/env" ]; then
   source "$HOME/.cargo/env"
