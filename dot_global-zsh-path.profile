@@ -10,6 +10,7 @@ path=(
   "${HOME}/bin"
 )
 
+_mayPath "/home/xyzzy/.local/share/pnpm/bin"
 _mayPath "/home/linuxbrew/.linuxbrew/bin"
 _mayPath "/home/linuxbrew/.linuxbrew/sbin"
 _mayPath "/opt/homebrew/bin"
