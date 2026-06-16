@@ -1,4 +1,5 @@
 typeset -gaU path
+typeset -gaU old_path
 
 function _mayPath() {
   if [ -d "$1" ]; then
@@ -6,9 +7,8 @@ function _mayPath() {
   fi
 }
 
-path=(
-  "${HOME}/bin"
-)
+old_path=($path)
+path=("${HOME}/bin")
 
 _mayPath "/home/xyzzy/.local/share/pnpm/bin"
 _mayPath "/home/linuxbrew/.linuxbrew/bin"
@@ -30,9 +30,9 @@ path+=(
 )
 _mayPath "/Library/Developer/CommandLineTools/usr/bin"
 
+path+=($old_path)
+
 if [ -f "$HOME/.cargo/env" ]; then
   source "$HOME/.cargo/env"
 fi
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

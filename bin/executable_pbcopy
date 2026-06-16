@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+printf "\x1b52;c;%s\x07" "$(base64 | tr -d '\n')"
