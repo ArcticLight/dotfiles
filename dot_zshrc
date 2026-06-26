@@ -20,6 +20,10 @@ COMPLETION_WAITING_DOTS="true"
 # much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# New directories have      755 - rwxr-xr-x
+# New files have permission 644 - rw-r--r--
+# Not sure why on some systems this ISN'T the default
+umask 022
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
