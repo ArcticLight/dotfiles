@@ -50,7 +50,7 @@ fi
 export DENO_DIR="$HOME/.deno"
 [ -s "$DENO_DIR/env" ] && \. "$DENO_DIR/env"
 # Add deno completions to search path
-if [[ ":$FPATH:" != *":/Users/xyzzy/.zsh/completions:"* ]]; then export FPATH="/Users/xyzzy/.zsh/completions:$FPATH"; fi
+if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="$HOME/.zsh/completions:$FPATH"; fi
 
 if [ -d "$HOME/.local/bin" ]; then
     export PATH="$HOME/.local/bin:$PATH"
