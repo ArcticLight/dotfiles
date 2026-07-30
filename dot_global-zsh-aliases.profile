@@ -2,7 +2,7 @@
 
 # Shortcuts
 if command -v zellij >/dev/null 2>&1 ; then
-  alias tc="zellij a -c"
+  alias tc="zellij a -c main"
 elif command -v tmux >/dev/null 2>&1 ; then
   alias tc="tmux new-session -A -s main"
 fi
