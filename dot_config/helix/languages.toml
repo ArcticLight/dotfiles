@@ -19,8 +19,8 @@ language-servers = [ "typescript-language-server", "codebook" ]
 # wants: npm i typescript && npm i -D typescript-language-server
 # ====
 [language-server.typescript-language-server]
-command = "npx"
-args = ["typescript-language-server", "--stdio"]
+command = "pnpm"
+args = ["exec", "tsc", "--lsp", "--stdio"]
 
 [language-server.codebook]
 command = "codebook-lsp"
