@@ -526,3 +526,7 @@ advanced_mouse_actions false
 web_client {
     font "monospace"
 }
+
+env {
+    COLORTERM "truecolor"
+}
