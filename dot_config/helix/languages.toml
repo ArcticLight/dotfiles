@@ -20,7 +20,7 @@ language-servers = [ "typescript-language-server", "codebook" ]
 # ====
 [language-server.typescript-language-server]
 command = "pnpm"
-args = ["exec", "tsc", "--lsp", "--stdio"]
+args = ["exec", "typescript-language-server", "--stdio"]
 
 [language-server.codebook]
 command = "codebook-lsp"
